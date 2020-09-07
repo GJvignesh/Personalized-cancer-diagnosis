@@ -9,16 +9,33 @@ Developed a Machine Learning algorithm that, using this knowledge base as a base
 #nlp #classification #Machine learning #EDA
 
 
-SUMMARY:
+## SUMMARY:
 
-    As there are 15 different model is tried, among those lowest log_loss is for [ Logistic Regression + Unigram and Bigram With max_features =10000 + Dimentionality reduction techique (Singular value Decomposotion) method ]
+### Problem Statement
 
-    The Worst model is Random forest with Response encoding, which overfits on train data by huge margin gave 44% misclassification error
+* Classify the given genetic variations/mutations based on evidence from text-based clinical literature. Develope a Machine Learning algorithm that, using this knowledge base as a baseline, automatically classifies genetic variations.
 
-    The Knn performs well with lowest of 32% misclassification error
+### Use case:
 
-    Balanced Dataset performs well as compared to imbalanced dataset
+* Classify genetic mutations based on clinical evidence. Interpreting clinical evidence is very challenging even for human specialists. If good model is developed to interpret clinical evidence and classify genetic mutations with high probability can be potentially useful in medical field.
 
-    Tfidf Techniues performs well as compared to One hot encoding techniques in almost all the model
+### Bussiness Impact
 
-    Word2vec is not tried, since the pretrained glove vector uses wikipedia/news data. But, the problem at hand is medical domain. may be most of the words vector represenation will not be avaliable there (hence w2v and Avg W2v is not tried)
+* In this way the Model can replace/reduce the work of human specialists needed for Interpreting clinical evidence
+
+### Data Cleaning
+
+* Preprocessing of the text data is done
+
+* Dataset is un-balanced (some classes are severely un-balanced)
+
+
+### Algorithm Applied
+
+* Top 3 Model Architecture deatils. 
+
+* Balanced Logistic regression + One hot encoding + Unigram + Bigram + top 10000 + Dimentionality Reduction
+
+* Knn on Tfidf
+
+* Balanced Logistic regression + Tfidf top 1000 features
